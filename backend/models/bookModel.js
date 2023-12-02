@@ -16,7 +16,6 @@ const bookSchema = mongoose.Schema(
     },
     coverImageUrl: {
       type: String, 
-      required: true,
     },
   },
   {
