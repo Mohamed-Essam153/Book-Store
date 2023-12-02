@@ -10,8 +10,18 @@ import BookModal from './BookModal';
 const BookSingleCard = ({ book }) => {
   const [showModal, setShowModal] = useState(false);
 
+  // Assuming book.image contains the image URL from the database
+  const backgroundImageStyle = {
+    backgroundImage: `url(${book.image})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+  };
+
   return (
-    <div className='border-2 border-gray-500 rounded-lg px-4 py-2 m-4 relative hover:shadow-xl'>
+    <div
+      className='border-2 border-gray-500 rounded-xl px-4 py-4 m-2 relative hover:shadow-xl '
+      style={backgroundImageStyle}
+    >
       <h2 className='absolute top-1 right-2 px-4 py-1 bg-red-300 rounded-lg'>
         {book.publishYear}
       </h2>

@@ -8,10 +8,12 @@ import BookSingleCard from './BookSingleCard';
 
 const BooksCard = ({ books }) => {
   return (
-    <div className='grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
-      {books.map((item) => (
-        <BookSingleCard key={item._id} book={item} />
-      ))}
+    <div className='bg-gradient-to-r from-cyan-200 to-yellow-100 flex justify-center items-center '> 
+      <div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4  '>
+        {books.map((item) => (  
+          <BookSingleCard key={item._id} book={item} />
+        ))}
+      </div>
     </div>
   );
 };
